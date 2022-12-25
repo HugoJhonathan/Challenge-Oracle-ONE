@@ -276,4 +276,10 @@ button {
     .box-resultado {
         margin-top: 16px;
     }
+
+    .button-primary,
+    .button-secondary {
+        min-width: 100%;
+    }
+
 }
