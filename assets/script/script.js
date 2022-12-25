@@ -8,7 +8,7 @@ const btnCriptografar = document.querySelector("#btn-criptografar")
 const btnDescriptografar = document.querySelector("#btn-descriptografar")
 const btnCopy = document.querySelector(".button-copy")
 
-let data = JSON.parse(window.localStorage.getItem('_aluracrypto')) || undefined
+let data = JSON.parse(window.localStorage.getItem('_aluracrypto')) || {}
 
 btnCriptografar.addEventListener('click', e => {
     if (!textareaInput.value.trim()) {
@@ -97,7 +97,7 @@ const saveDataLocalStorage = () => {
 
 const loadDataInitial = () => {
 
-    if (!data) return
+    if (!data.txt) return
 
     textareaInput.value = data.txt
 
